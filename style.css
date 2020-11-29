@@ -3,14 +3,16 @@
 html {
     font-family: "Lato", Arial, sans-serif;
     font-size: 10px;
-    background-image: linear-gradient(-45deg, #EE7752,#E73C7E, #23A6D5, #23D5AB);
+    background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
     height: 100vh;
     width: 100%;
     color: #fff;
     position: relative;
     animation: change 10s ease-in-out infinite;
-};
+}
+
+;
 
 * {
     padding: 0;
@@ -46,7 +48,7 @@ h5 {
     width: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;  
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -57,7 +59,7 @@ h5 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    align-items: center;  
+    align-items: center;
 }
 
 
@@ -69,19 +71,48 @@ h5 {
     background-color: rgb(255, 0, 179);
     border: 2px solid #E73C7E;
     border-radius: 5px;
-    
+    animation: rotate 5s ease-in-out infinite,
+               color 5s ease-in-out infinite;
+    animation-delay: 0ms;
+
+
 }
+
+@keyframes color {
+    0% {
+        background-color: aqua;
+    }
+
+    50% {
+        background-color: blueviolet;
+    }
+
+    100% {
+        background-color: rgb(255, 0, 0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
 
 @keyframes change {
-    0%{
-        background-position: 0 50% ;
+    0% {
+        background-position: 0 50%;
     }
-    50%{
-        background-position: 100% 50% ;
+
+    50% {
+        background-position: 100% 50%;
     }
-    100%{
-        background-position: 0 50% ;
+
+    100% {
+        background-position: 0 50%;
     }
 }
-
-

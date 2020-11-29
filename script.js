@@ -13,6 +13,9 @@ function changeBg() {
         document.querySelector('h5').style.backgroundColor = 'rgb(3, 202, 202)';
         bool = true;
     }
-    bx.style.transform = 'rotate(15deg)';
 
+}
+
+function scale() {
+    
 }
